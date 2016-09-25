@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <script src="scroll.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            background: url("./image/jd-1.jpg");
+            position: relative;
+            float: left;
+        }
+
+        .s {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            opacity: 0.5 ;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .box1 {
+          width: 800px;
+          height: 800px;
+          background: url("./image/jd-2.jpg");
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+
+        .box2 {
+          width: 350px;
+          height: 350px;
+          border : 1px solid gray;
+          position: relative;
+          float: left;
+          overflow: hidden;
+          display: none;
+        }
+
+       .current {
+          display: none;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="box" id="box-id">
+     <div id="s-id"></div>
+ </div>
+  <div class="box2" id="box2">
+    <div class="box1" id="box1"></div>
+  </div>
+ <script>
+     var box = document.getElementById("box-id");
+     var s = document.getElementById("s-id");
+     var box1 = document.getElementById("box1");
+     var box2 = document.getElementById("box2");
+
+     box.onmousemove = function (event) {
+        s.className = "s";
+       box2.style.display = "block";
+
+         //pageY, pageX 表示的是鼠标在整个页面上的坐标值
+//         console.log(event.pageX, event.pageY);
+
+         //兼容代码
+         var pageX = event.pageX || event.clientX + scroll().left;
+         var pageY = event.pageY || event.clientY + scroll().top;
+
+         var x = pageX - s.offsetWidth / 2;
+         var y = pageY - s.offsetHeight / 2;
+//         console.log(x, y);
+
+         if (x <= 0) {
+             x = 0;
+         } else if (x >= box.offsetWidth - s.offsetWidth){
+             x = box.offsetWidth - s.offsetWidth;
+         }
+
+         if (y <= 0) {
+             y = 0;
+         } else if (y >= box.offsetHeight - s.offsetHeight){
+             y = box.offsetHeight - s.offsetHeight;
+         }
+
+         s.style.left = x + "px";
+         s.style.top = y + "px";
+
+
+//         (800 - 500)   /     (300 - 200)
+
+         var i = (800 - 350) / (350 - 100);
+         box1.style.top = (-i * y) + "px";
+         box1.style.left = (-i * x) + "px";
+     };
+
+     box.onmouseout = function (){
+       s.className = "";
+       box2.style.display = "none";
+     }
+
+ </script>
+
+</body>
+</html>

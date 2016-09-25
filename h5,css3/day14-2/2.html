@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1{
+        width: 882px;
+        height: 86px;
+        margin: 300px auto;
+        overflow: hidden;
+      }
+      ul{
+        list-style: none;
+
+      }
+      .box2{
+        width: 1764px;
+        height: 86px;
+        animation: run 10s linear infinite;
+      }
+      .box2 ul li{
+        width: 126px;
+        height: 86px;
+        float: left;
+      }
+
+      @keyframes run {
+        0%{
+
+        }
+        50%{
+          transform: translateX(-441px);
+        }
+        100%{
+          transform: translateX(-882px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">
+      <ul>
+        <li><img src="./image/1.jpg" alt=""></li>
+        <li><img src="./image/2.jpg" alt=""></li>
+        <li><img src="./image/3.jpg" alt=""></li>
+        <li><img src="./image/4.jpg" alt=""></li>
+        <li><img src="./image/5.jpg" alt=""></li>
+        <li><img src="./image/6.jpg" alt=""></li>
+        <li><img src="./image/7.jpg" alt=""></li>
+        <li><img src="./image/1.jpg" alt=""></li>
+        <li><img src="./image/2.jpg" alt=""></li>
+        <li><img src="./image/3.jpg" alt=""></li>
+        <li><img src="./image/4.jpg" alt=""></li>
+        <li><img src="./image/5.jpg" alt=""></li>
+        <li><img src="./image/6.jpg" alt=""></li>
+        <li><img src="./image/7.jpg" alt=""></li>
+      </ul>
+      </div>
+    </div>
+  </body>
+</html>

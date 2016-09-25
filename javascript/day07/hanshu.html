@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function move(obj,target){
+        var speed = target > obj.offsetLeft ? 15 : -15;
+        var Timer = setInterval(function(){
+          obj.style.left = obj.offsetLeft + speed + "px";
+
+          var tt = target - obj.offsetLeft;
+          if (Math.abs(tt) <= 15){
+            clearInterval(Timer);
+          }
+        },30);
+      }
+    </script>
+  </body>
+</html>

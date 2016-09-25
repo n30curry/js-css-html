@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    选项：&nbsp;<input type="checkbox" name="" id="i1"><br/>
+    <button id="but-1">全选</button>
+    <button id="but-2">反选</button>
+    <button id="but-3">取消</button>
+
+    <script>
+      var but1 = document.getElementById("but-1");
+      var but2 = document.getElementById("but-2");
+      var but3 = document.getElementById("but-3");
+      var ins = document.getElementsByTagName("input");
+
+      but1.onclick = function (){
+        for(i = 0; i < ins.length; i++){
+          ins[i].checked = true;
+        }
+      }
+      but3.onclick = function (){
+        for(i = 0; i < ins.length; i++){
+          ins[i].checked = false;
+        }
+      }
+      but2.onclick = function (){
+        for(i = 0; i < ins.length; i++){
+          if (ins[i].checked){
+            ins[i].checked = false;
+          }
+          else{
+            ins[i].checked = true;
+          }
+        }
+
+      }
+    </script>
+  </body>
+</html>

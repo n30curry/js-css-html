@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>正方体</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        transform-style: preserve-3d;
+      }
+      .div1{
+        width: 300px;
+        height: 300px;
+        margin: 200px auto;
+        transform-style:preserve-3d;
+        transform: rotateX(20deg) rotateY(20deg) rotateZ(20deg);
+        position: relative;
+        transition: all 3s linear;
+      }
+      .div2{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        opacity:0.5
+
+      }
+      .div2:nth-child(1){
+        background-color: lightgreen;
+
+      }
+      .div2:nth-child(2){
+        background-color: purple;
+        transform:translateZ(-100px);
+      }
+      .div2:nth-child(3){
+        background-color: lightblue;
+        transform-origin: left center;
+        transform: rotateY(-270deg);
+      }
+      .div2:nth-child(4){
+        background-color: pink;
+        transform-origin: right center;
+        transform: rotateY(270deg);
+      }
+      .div2:nth-child(5){
+        background-color: yellow;
+        transform-origin: top center;
+        transform: rotateX(270deg);
+      }
+      .div2:nth-child(6){
+        background-color: gray;
+        transform-origin: bottom center;
+        transform: rotateX(-270deg);
+      }
+      .div1:hover {
+        transform: rotateX(-360deg) rotateY(150deg) rotateZ(80deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <div class="div2"></div>
+      <div class="div2"></div>
+      <div class="div2"></div>
+      <div class="div2"></div>
+      <div class="div2"></div>
+      <div class="div2"></div>
+    </div>
+  </body>
+</html>

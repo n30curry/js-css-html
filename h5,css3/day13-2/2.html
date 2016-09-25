@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .box1{
+        width: 100px;
+        height: 50px;
+        margin: 100px auto;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 1s linear;
+      }
+      ul{
+        width: 100px;
+        height: 50px;
+        transform-style: preserve-3d;
+        list-style: none;
+        position: absolute;
+        top:0;
+      }
+      li{
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+      }
+      .box1 ul:nth-child(1) li{
+        background-color: blue;
+      }
+      .box1 ul:nth-child(2) li{
+        background-color: green;
+        transform-origin:top center;
+        transform: rotateX(270deg);
+      }
+      .box1:hover {
+        transform-origin: center center center;
+        transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <ul>
+        <li>hello</li>
+      </ul>
+      <ul>
+        <li>world</li>
+      </ul>
+    </div>
+
+  </body>
+</html>

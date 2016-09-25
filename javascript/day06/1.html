@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 100%;
+        height: 300px;
+      }
+
+      .box2 {
+        float: left;
+      }
+
+      .box3 {
+        float: right;
+      }
+
+      .box1 {
+        height: 30px;
+        font-size: 30px;
+        line-height: 30px;
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1" id="box1"></div>
+      <div class="box2" id="box2"><button id="bu1">关闭</button><img src="./1.jpg" alt=""></div>
+      <div class="box3" id="box3"><button id="bu2">关闭</button><img src="./1.jpg" alt=""></div>
+    </div>
+    <script>
+      var box1 = document.getElementById("box1");
+      var box2 = document.getElementById("box2");
+      var box3 = document.getElementById("box3");
+      var bu1 = document.getElementById("bu1");
+      var bu2 = document.getElementById("bu2");
+
+      var num = 10;
+
+      function guanBi() {
+        num--;
+        if (num < 0){
+          clearInterval(timer);
+          return;
+        } else {
+          box1.innerHTML = num + "s之后关闭广告";
+        }
+      }
+
+      var timer = setInterval(guanBi,1000);
+
+      function fun(){
+        box2.style.display = "none";
+        box3.style.display = "none";
+      }
+
+      setTimeout(fun,10000);
+
+      bu1.onclick = function () {
+        this.parentNode.style.display = "none";
+      }
+
+      bu2.onclick = function () {
+        this.parentNode.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div1 {
+            width: 1350px;
+            height: 117px;
+            background: url("./head_bg.png");
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .div2 {
+            width: 980px;
+            height: 30px;
+            margin: 20px auto 0;
+            ;
+        }
+
+        .div3 {
+            width: 179px;
+            height: 24px;
+            background-image: url("./logo.png");
+            float: left;
+        }
+
+        .div4 {
+            width: 33px;
+            height: 30px;
+            background: url("./input_r1_c2.png");
+            float: right;
+        }
+
+        .div5 {
+            width: 167px;
+            height: 30px;
+            background: url("./input_r1_c1.png");
+            float: right;
+        }
+
+        .div6 {
+            width: 980px;
+            height: 47px;
+            padding: 20px 0 0;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .div6 a:hover {
+            color: red;
+        }
+
+        .div6 li {
+            width: 100px;
+            float: left;
+        }
+
+        .div7 {
+            width: 980px;
+            height: 597px;
+            margin: 0 auto;
+            background: url("./banner.png")
+        }
+
+        .div8 {
+            width: 980px;
+            height: 45px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .div9 {
+            width: 34px;
+            height: 14px;
+            background-image: url("./point.png");
+            margin: 15px auto;
+            ;
+        }
+
+        .box1 {
+            width: 1350px;
+            height: 30px;
+            border-top: 1px solid #efefef;
+            border-bottom: 1px solid #efefef;
+            background-color: #fbfbfb;
+            margin: 0 auto;
+        }
+
+        .box2 {
+            width: 980px;
+            height: 30px;
+            margin: auto;
+        }
+
+        .box3 {
+            height: 30px;
+            line-height: 30px;
+            font-weight: bolder;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .box4 {
+            height: 30px;
+            line-height: 30px;
+            float: left;
+        }
+
+        .box5 {
+            width: 87px;
+            height: 17px;
+            background-image: url("./share.png");
+            float: right;
+        }
+
+        .box6 {
+            width: 980px;
+            height: 227px;
+            margin: 15px auto;
+        }
+
+        .box7 {
+            width: 310px;
+            height: 227px;
+            margin-right: 12px;
+            border: 1px solid #efefef;
+            float: left;
+        }
+
+        .hh {
+            height: 30px;
+            padding: 14px 7px 0px;
+        }
+
+        .hh1 {
+            width: 15px;
+            height: 13px;
+            background-image: url("./canvas_r4_c4.png");
+            margin: 4px 5px 0 0;
+            float: left;
+        }
+
+        .hh2 {
+            color: #7cb906;
+            float: left;
+        }
+
+        .hh3 {
+            float: right;
+        }
+
+        .hh3 a:link {
+            color: #666666;
+        }
+
+        .hh3 a:hover {
+            color: red;
+        }
+
+        .box8 {
+            width: 375px;
+            height: 227px;
+            margin-right: 12px;
+            border: 1px solid #efefef;
+            float: left;
+        }
+
+        .hh4 ul li {
+            height: 28px;
+            width: 320px;
+            border-bottom: 1px dashed #efefef;
+        }
+
+        .hh4 ul {
+            margin: 0px
+        }
+
+        .hh4 ul a {
+            color: #666666;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .hh4 ul .a1 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .hh4 ul a:hover {
+            color: red;
+        }
+
+        .box9 {
+            width: 265px;
+            height: 227px;
+            border: 1px solid #dcdcdc;
+            float: left;
+        }
+
+        .hh5 {
+            height: 18px;
+            margin-top: 9px;
+            overflow: hidden;
+        }
+
+        .hh6 {
+            width: 34px;
+            height: 11px;
+            border-right: 3px solid #7cb906;
+            margin-top: 4px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .hh7 a:link {
+            color: #666666;
+        }
+
+        .hh7 a:hover {
+            color: red;
+        }
+
+        .hh8 {
+            height: 40px;
+            margin: 17px 34px;
+            color: #666666;
+        }
+
+        .tt1 {
+            width: 950px;
+            height: 190px;
+            background-color: #2d2d2d;
+            border-bottom: 1px dashed #414141;
+            margin: auto;
+        }
+
+        .tt2 {
+            width: 1350px;
+            height: 85px;
+            background-color: #2d2d2d;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        dl {
+            width: 104px;
+            float: left;
+        }
+
+        dl dt {
+            font-weight: bolder;
+            color: #c7c7c7;
+            margin-bottom: 5px;
+        }
+
+        dl dd {
+            margin-left: 0;
+            margin: 6px 0;
+        }
+
+        dd a {
+            color: #666666;
+        }
+
+        dd a:hover {
+            color: red;
+        }
+
+        .tt1 {
+            padding: 15px 200px;
+        }
+
+        .tt2 div {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">
+            <div class="div3"></div>
+            <div class="div4">
+                <form class="" action="index.html" method="post">
+                    <input type="button" name="name" value="">
+                </form>
+            </div>
+            <div class="div5">
+                <form class="" action="index.html" method="post">
+                    <input type="text">
+                </form>
+            </div>
+
+        </div>
+        <div class="div6">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">首页</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="div7"></div>
+    <div class="div8">
+        <div class="div9"></div>
+    </div>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">最新公告:</div>
+            <div class="box4">上河的发生地方撒地方;拉伸可肌肤.</div>
+            <div class="box5"></div>
+        </div>
+    </div>
+    <div class="box6">
+        <div class="box7">
+            <div class="hh">
+                <div class="hh1"></div>
+                <div class="hh2">新品发布</div>
+            </div>
+        </div>
+        <div class="box8">
+            <div class="hh">
+                <div class="hh1"></div>
+                <div class="hh2">新品发布</div>
+                <div class="hh3"><a href="#">更多</a></div>
+            </div>
+            <div class="hh4">
+                <ul>
+                    <li><a class="a1" href="#">致歉公告</a></li>
+                    <li><a href="#">分节阿斯蒂芬就是打开链接</a></li>
+                    <li><a href="#">分节阿斯蒂芬就是打开链接</a></li>
+                    <li><a href="#">分节阿斯蒂芬就是打开链接</a></li>
+                    <li><a href="#">分节阿斯蒂芬就是打开链接</a></li>
+                    <li><a href="#">分节阿斯蒂芬就是打开链接</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box9">
+            <div class="hh">
+                <div class="hh1"></div>
+                <div class="hh2">新品发布</div>
+            </div>
+            <div class="hh5">
+                <div class="hh6"></div>
+                <div class="hh7"><a href="#">售后服务</a></div>
+            </div>
+            <div class="hh5">
+                <div class="hh6"></div>
+                <div class="hh7"><a href="#">售后服务</a></div>
+            </div>
+            <div class="hh5">
+                <div class="hh6"></div>
+                <div class="hh7"><a href="#">售后服务</a></div>
+            </div>
+            <div class="hh5">
+                <div class="hh6"></div>
+                <div class="hh7"><a href="#">售后服务</a></div>
+            </div>
+            <div class="hh8">
+                <div>罚款收到甲方;啦睡发范</div>
+                <div>罚款收到甲方;啦睡发范</div>
+            </div>
+        </div>
+    </div>
+    <div class="tt1">
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+        <dl>
+            <dt>和尚首页</dt>
+            <dd><a href="#">返回首页</a></dd>
+        </dl>
+    </div>
+    <div class="tt2">
+        <div class="tt3">2011-2012版权所有附近萨里空间放;来撒快减肥卡萨了减肥卡了手机法拉斯卡;大姐夫</div>
+        <div>第三方和骄傲是考核分类撒撒娇卡电话反馈萨拉的结婚</div>
+    </div>
+</body>
+
+</html>

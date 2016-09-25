@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      ul{
+        list-style: none;
+      }
+      .box1{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        border: 10px solid ;
+        margin: 50px auto;
+        position: relative;
+      }
+      .box1 ul li{
+        height: 306px;
+        width: 0;
+        border-left: 3px solid gray;
+        border-right: 3px solid gray;
+
+        position: absolute;
+        left: 50%;
+        margin-left: -2px;
+      }
+      .box1 ul li:nth-child(2){
+        transform: rotate(30deg);
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+      }
+      .box1 ul li:nth-child(3){
+        transform: rotate(60deg);
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+      }
+      .box1 ul li:nth-child(4){
+        transform: rotate(90deg);
+      }
+      .box1 ul li:nth-child(5){
+        transform: rotate(120deg);
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+      }
+      .box1 ul li:nth-child(6){
+        transform: rotate(150deg);
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+      }
+      .box2{
+        width: 270px;
+        height: 270px;
+        border-radius: 135px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -135px;
+        margin-top: -135px;
+      }
+      .box3 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        animation: run 43200s linear infinite;
+      }
+      .box3-1 {
+        height: 80px;
+        width: 10px;
+        background-color: gray;
+        position: absolute;
+        top: -80px;
+        left: 15px;
+      }
+      .box4 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        animation: run 3600s linear infinite;
+      }
+      .box4-1 {
+        height: 90px;
+        width: 6px;
+        background-color: black;
+        position: absolute;
+        top: -90px;
+        left: 17px;
+      }
+      .box5 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        animation: run 60s linear infinite;
+
+      }
+      .box5-1 {
+        height: 101px;
+        width: 2px;
+        background-color: red;
+        position: absolute;
+        top: -100px;
+        left: 19px;
+      }
+      @keyframes run {
+        0%{}
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="box2">
+        <div class="box3">
+          <div class="box3-1"></div>
+        </div>
+        <div class="box4">
+          <div class="box4-1"></div>
+        </div>
+        <div class="box5">
+          <div class="box5-1"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

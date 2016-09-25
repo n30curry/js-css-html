@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1 {
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+      }
+      p{
+        height: 60px;
+        line-height: 60px;
+        text-align:center;
+      }
+
+      .box1 p:nth-child(1),
+      .box1 p:nth-child(3),
+      .box1 p:nth-child(5)
+      {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1" id="box-1">
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+      <p>玩没时间的开放就是；啊浪费觉得是；啊浪费就是的；垃圾啊胜利的</p>
+    </div>
+    <script>
+      var box1 = document.getElementById("box-1");
+      var ps = box1.getElementsByTagName("p");
+      for (i = 0; i < ps.length; i++){
+        ps[i].onmouseover = function (){
+          this.style.background = "green";
+        }
+        ps[i].onmouseout = function () {
+          this.style.background = "";
+        }
+      }
+    </script>
+  </body>
+</html>

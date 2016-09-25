@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .div1 {
+        width: 50px;
+        height: 50px;
+        background: green;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="div1" id="div1"></div>
+    <button id="bt1">200</button>
+    <button id="bt2">400</button>
+    <script>
+      var div1 = document.getElementById("div1");
+      var bt1 = document.getElementById("bt1");
+      var bt2 = document.getElementById("bt2");
+      var Timer = null;
+
+      bt1.onclick = function() {
+
+        Timer = setInterval(function(){
+          if(div1.offsetLeft < 200) {
+            div1.style.left = div1.offsetLeft + 10 + "px";
+            if (div1.offsetLeft >= 200){
+              clearInterval(Timer);
+            }
+          } else{
+            div1.style.left = div1.offsetLeft - 10 + "px";
+            if (div1.offsetLeft <= 200){
+              clearInterval(Timer);
+            }
+          }
+        }, 10);
+      }
+
+      bt2.onclick = function (){
+        Timer = setInterval(function(){
+            div1.style.left = div1.offsetLeft + 10 + "px";
+            if (div1.offsetLeft >= 400){
+              clearInterval(Timer);
+            }
+
+        } , 10);
+      }
+    </script>
+  </body>
+</html>

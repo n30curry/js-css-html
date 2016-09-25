@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .box1{
+        width: 1050px;
+        height: 200px;
+        margin: 200px auto;
+      }
+      .box1 ul li {
+        width: 150px;
+        height: 180px;
+        float: left;
+        position: relative;
+      }
+
+      .box1 ul li:nth-child(1){
+        background: #00bbff;
+      }
+
+
+      .box1 ul li:nth-child(1) .box1-1{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: #33c9cc;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+      .box1 ul li:nth-child(1) .box1-2{
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        background: yellow;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -40px;
+        margin-left: -40px;
+      }
+      .box1 ul li:nth-child(1) .box1-3,
+      .box1 ul li:nth-child(1) .box1-4{
+        width: 16px;
+        height: 120px;
+        background: #23c4ff;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -60px;
+        opacity: 0.9;
+      }
+      .box1 ul li:nth-child(1) .box1-4{
+        transform: rotate(90deg);
+      }
+
+      @keyframes run1 {
+        0%{
+
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      .box1 ul li:nth-child(1) .div1-5{
+        width: 150px;
+        height: 180px;
+        position: relative;
+        animation: run1 2s linear infinite;
+      }
+
+      .box1 ul li:nth-child(2){
+        background: #2eb5e5;
+        position: relative;
+      }
+
+      .box2-1 {
+        width: 110px;
+        height: 80px;
+        margin: 10px auto;
+        position: relative;
+        animation: run3 2s linear infinite;
+      }
+
+      .box2-2{
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 30px;
+        position: absolute;
+        top: 0px;
+      }
+      .box2-3{
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 40px;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+      }
+      .box2-4{
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 30px;
+        position: absolute;
+        top: 22px;
+        left: 54px;
+      }
+      .box2-5{
+        width: 50px;
+        height: 50px;
+        background: white;
+        border-radius: 25px;
+        position: absolute;
+        top: 0px;
+        left: 46px;
+      }
+
+      .box2-6{
+        width: 110px;
+        height: 20px;
+        border-radius: 55px/10px;
+        background: #289fc9;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        animation: run4 2s linear infinite;
+      }
+      @keyframes run3 {
+        0%{
+
+        }
+        50%{
+          transform: translateY(30px);
+        }
+        100%{
+          transform: translateY(0);
+        }
+      }
+      @keyframes run4 {
+        0%{
+          opacity: 0.3;
+        }
+        50%{
+          opacity: 0.6;
+          transform: scale(0.6);
+        }
+        100%{
+          opacity: 0.3;
+          transform: scale(1);
+        }
+      }
+      .box1 ul li:nth-child(3){
+        background: #e6e6e6;
+        position: relative;
+      }
+      .box3-1 {
+        width: 110px;
+        height: 80px;
+        margin: 10px auto;
+        position: relative;
+        animation: run3 2s linear infinite;
+      }
+
+      .box3-2{
+        width: 60px;
+        height: 60px;
+        background: #cccccc;
+        border-radius: 30px;
+        position: absolute;
+        top: 0px;
+      }
+      .box3-3{
+        width: 80px;
+        height: 80px;
+        background: #cccccc;
+        border-radius: 40px;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+      }
+      .box3-4{
+        width: 60px;
+        height: 60px;
+        background: #cccccc;
+        border-radius: 30px;
+        position: absolute;
+        top: 22px;
+        left: 54px;
+      }
+      .box3-5{
+        width: 50px;
+        height: 50px;
+        background: #cccccc;
+        border-radius: 25px;
+        position: absolute;
+        top: 0px;
+        left: 46px;
+      }
+
+      .box3-6{
+        width: 110px;
+        height: 20px;
+        border-radius: 55px/10px;
+        background: #b9b9b9;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        animation: run4 2s linear infinite;
+      }
+      .box3-7{
+        width: 110px;
+        height: 80px;
+        position: absolute;
+        top:62px;
+        left: 20px;
+      }
+      .box1 .box3-7 ul li{
+        width: 3px;
+        height: 6px;
+        background: #a6a6a6;
+        float: left;
+        margin-left: 10px;
+      }
+      @keyframes run5 {
+        0%{}
+
+        100%{
+          transform: translateY(80px);
+        }
+      }
+      .box1 .box3-7 ul li:nth-child(1){
+        animation: run5 1s linear infinite ;
+      }
+      .box1 .box3-7 ul li:nth-child(2){
+        animation: run5 1s linear infinite 0.2s;
+      }
+      .box1 .box3-7 ul li:nth-child(3){
+        animation: run5 1s linear infinite 0.1s ;
+      }
+      .box1 .box3-7 ul li:nth-child(4){
+        animation: run5 1s linear infinite 0.3s;
+      }
+      .box1 .box3-7 ul li:nth-child(5){
+        animation: run5 1s linear infinite 1s;
+      }
+      .box1 .box3-7 ul li:nth-child(6){
+        animation: run5 1s linear infinite 1.3s;
+      }
+      .box1 .box3-7 ul li:nth-child(7){
+        animation: run5 1s linear infinite  0.2s;
+      }
+      .box1 .box3-7 ul li:nth-child(8){
+        animation: run5 1s linear infinite  1.2s;
+      }
+      .box1 ul li:nth-child(4){
+        background: #f3d166;
+        position: relative;
+      }
+      .box4{
+        width: 120px;
+        height: 70px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        animation: run6 2s linear infinite;
+      }
+      .box4-1{
+        width: 108px;
+        height: 108px;
+        border-radius: 65px;
+        position: absolute;
+        top: 60px;
+        left: 4px;
+        box-shadow: 0 -5px 0px red,0 -10px 0px green,0 -15px 0 yellow, 0 -20px 0 #6ad7f8, 0 -25px 0 blue, 0 -30px 0 #a3459b;
+      }
+      .box4-2{
+        width: 110px;
+        height: 20px;
+        border-radius: 55px/10px;
+        background: #d6b85a;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        animation: run4 2s linear infinite;
+      }
+      @keyframes run6 {
+        0%{}
+        25%{
+          transform: rotate(10deg);
+        }
+        50%{
+          transform: rotate(0deg);
+        }
+        75%{
+          transform: rotate(-10deg);
+        }
+        100%{
+          transform: rotate(0deg);
+        }
+
+      }
+      .box1 ul li:nth-child(5){
+        background: #222233;
+        position: relative;
+      }
+      .box5-1{
+         width: 80px;
+         height: 80px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         margin-top: -40px;
+         margin-left: -40px;
+       }
+       .box5-2 {
+         width: 60px;
+         height: 60px;
+         border-radius: 30px;
+         background: white;
+         overflow: hidden;
+       }
+       .box5-3 {
+         width: 55px;
+         height: 55px;
+         border-radius: 30px;
+         background: red;
+         position: absolute;
+         top: 3px;
+         left: 16px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <ul>
+        <li>
+          <div class="div1-5">
+            <div class="box1-4"></div>
+            <div class="box1-3"></div>
+            <div class="box1-1"></div>
+            <div class="box1-2"></div>
+          </div>
+        </li>
+        <li>
+          <div class="box2-1">
+            <div class="box2-2"></div>
+            <div class="box2-3"></div>
+            <div class="box2-4"></div>
+            <div class="box2-5"></div>
+          </div>
+          <div class="box2-6"></div>
+        </li>
+        <li>
+          <div class="box3-1">
+            <div class="box3-2"></div>
+            <div class="box3-3"></div>
+            <div class="box3-4"></div>
+            <div class="box3-5"></div>
+          </div>
+          <div class="box3-6"></div>
+          <div class="box3-7">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="box4">
+            <div class="box4-1"></div>
+          </div>
+          <div class="box4-2"></div>
+        </li>
+        <li>
+          <div class="box5-1">
+            <div class="box5-2"></div>
+            <div class="box5-3"></div>
+          </div>
+          <div class="box5-4"></div>
+          <div class="box5-5"></div>
+          <div class="box5-6"></div>
+          <div class="box5-7"></div>
+          <div class="box5-8"></div>
+          <div class="box5-9"></div>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

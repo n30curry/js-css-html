@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>微博</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1 {
+        width: 500px;
+
+        margin: 50px auto;
+        border: 1px solid red;
+        position: relative;
+        padding-bottom: 50px;
+      }
+
+      textarea {
+        width: 300px;
+        margin: 20px 100px;
+        border-color: green;
+      }
+
+      button {
+        position: absolute;
+        right: 35px;
+        top: 142px;
+      }
+
+      .box3 {
+        width: 300px;
+        height: 25px;
+        line-height: 25px;
+        border-bottom: 1px solid green;
+        margin: auto;
+      }
+
+      .box4 {
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
+        float: right;
+        color: red;
+        cursor: pointer;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1" id="box1">
+      <textarea name="weibo" rows="8" cols="30"></textarea id="text">
+      <button type="button" name="button" id="bu1">发布</button>
+    </div>
+    <script>
+      var box1 = document.getElementById("box1");
+      var bu1 = document.getElementById("bu1");
+      var text = document.getElementById("text");
+
+      bu1.onclick = function (){
+        var b = document.createElement("div");
+        box1.appendChild(b);
+        b.setAttribute("class","box3");
+
+        var boxs = document.getElementsByClassName("box3");
+
+        for (j = 0; j < boxs.length; j++){
+          if (boxs[j].firstChild){
+            boxs[j].removeChild(boxs[j].firstChild);
+          }
+        }
+
+        for (i = 0; i < boxs.length; i++){
+
+
+            var b = document.createElement("div");
+            // b.innerHTML = ；
+            boxs[i].appendChild(b);
+            b.setAttribute("class","box4");
+
+        }
+      };
+
+      var box4s = document.getElementsByClassName("box4");
+      for (u = 0; u < box4s.length; u++){
+        box4s[u].onclick = function (){
+          box1.removeChild(box1.children[u+3])
+        };
+      }
+
+    </script>
+  </body>
+</html>

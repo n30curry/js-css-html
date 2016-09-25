@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    #box{
+      background-color: yellow;
+      width: 400px;
+      height: 500px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    ul{
+      list-style: none;
+    }
+    ul li {
+      width: 80px;
+      height: 50px;
+      margin-right: 20px;
+      background-color: green;
+      float: left;
+    }
+    .box1 ,.box2,.box3,.box4{
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      bottom: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <ul>
+        <li>国内</li>
+        <li>国际</li>
+        <li>社会</li>
+        <li>百家</li>
+      </ul>
+      <div class="box1">hello world</div>
+      <div class="box2">kfdjsa;lfjalsk;djf</div>
+      <div class="box3">wanmeishijie</div>
+      <div class="box4">hahahahaha</div>
+    </div>
+    <script>
+      var box = document.getElementById("box");
+      var lis = box.getElementsByTagName("li");
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .div{
+        width: 300px;
+        height: 500px;
+        background: pink;
+        margin: 50px auto;
+      }
+
+      .div-head {
+        height: 100px;
+      }
+
+      .div-head li{
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: green;
+        float: left;
+      }
+
+      .div-connect li{
+        width: 300px;
+        height: 400px;
+        display: none;
+      }
+
+      .div-head .curry{
+        background: none;
+      }
+
+      .div-connect .curry{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div" id="div">
+      <div class="div-head" id="div1">
+        <ul>
+          <li class="curry">一</li>
+          <li>二</li>
+          <li>三</li>
+        </ul>
+      </div>
+      <div class="div-connect" id="div2">
+        <ul>
+          <li class="curry">1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var div = document.getElementById("div");
+      var div1 = document.getElementById("div1");
+      var div2 = document.getElementById("div2");
+      var heads = div1.getElementsByTagName("li");
+      var contens = div2.getElementsByTagName("li");
+
+      for (i = 0; i < heads.length; i++){
+        heads[i].myLi = i
+
+        heads[i].onmouseover = function (){
+          for (j = 0; j < heads.length; j++){
+            heads[j].className = "";
+            contens[j].className = "";
+          }
+          this.className = "curry";
+          contens[this.myLi].className = "curry";
+        }
+      }
+    </script>
+  </body>
+</html>

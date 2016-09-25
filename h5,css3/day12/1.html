@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .box{
+        width: 270px;
+        height: 130px;
+        margin: 50px auto;
+        background-image: url("./image/baidu.png");
+        position: relative;
+      }
+      .box1{
+        width: 106px;
+        height: 62px;
+        background: url("./image/baidu.png") 184px 78px;
+        position: absolute;
+        top:51px;
+        right: 78px;
+      }
+      .box:hover .box3 {
+        background: url("./image/baidu.png") 17280px 0;
+      }
+      .box2{
+        position: absolute;
+        top:  68px;
+        right:0px;
+        width: 270px;
+        height: 37px;
+
+      }
+      .box2-1{
+        float: left;
+        font-size: 55px;
+        font-weight: bolder;
+        color: red;
+        line-height: 33px;
+      }
+      .box2-2{
+        float: right;
+        font-size: 43px;
+        font-weight: bolder;
+        color: red;
+        line-height: 42px;
+      }
+      .box3{
+        width: 270px;
+        height: 46px;
+        background: url("./image/baidu.png");
+        transition:all 3s linear;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- <div class="box2">
+        <div class="box2-1">Bai</div>
+        <div class="box2-2">百度</div>
+      </div> -->
+      <div class="box1"></div>
+      <div class="box3"></div>
+    </div>
+  </body>
+</html>
