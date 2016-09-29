@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function quChu(obj){
+        var s1 = obj.replace(/^\s*/,"");
+        var s2 = s1.replace(/\s*$/,"");
+        return s2
+      }
+      var a = "             hello world  ";
+      var b = quChu(a);
+      console.log("["+b+"]");
+    </script>
+  </body>
+</html>

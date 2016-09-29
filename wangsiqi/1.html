@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 609px;
+        height: 377px;
+        margin: 50px auto;
+        background: black;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .box ul li{
+        display: inline-block;
+      }
+
+      .box ul .current{
+        background: gray;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li><img src="./01.jpg" alt="" ></li>
+        <li><img src="./02.jpg" alt=""></li>
+        <li><img src="./03.jpg" alt=""></li>
+        <li><img src="./04.jpg" alt=""></li>
+        <li><img src="./05.jpg" alt=""></li>
+        <li><img src="./06.jpg" alt=""></li>
+      </ul>
+    </div>
+    <script>
+      var lis = document.getElementsByTagName("li");
+      console.log(lis.length);
+      for (i = 0; i < lis.length; i++){
+        lis[i].className = "current";
+        lis[i].onmouseover = function(){
+          this.className = "";
+
+        }
+        lis[i].onmouseout = function(){
+          this.className = "current";
+        }
+      }
+    </script>
+  </body>
+</html>

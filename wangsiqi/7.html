@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background: yellow;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box-id"></div>
+
+    <script>
+      var box1 = document.getElementById("box-id");
+      box1.style.display = "block";
+      box1.style.visibility = "hidden";
+      a = box1.offsetWidth;
+      b = box1.offsetHeight;
+      box1.style.display = "none";
+      console.log(a);
+      console.log(b);
+    </script>
+  </body>
+</html>

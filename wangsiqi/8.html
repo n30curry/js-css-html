@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var raw = "name=lisi&age=10&hobby=swim&hobby=basketball&score=80&hobby=football"
+      var newraw = raw.replace(/age/,"name");
+      // console.log(newraw);
+      var newraw1 = newraw.replace(/hobby=swim&hobby=basketball&score=80&hobby=football/,"hobby=swim,basketball,football&score=80");
+      console.log(newraw1);
+    </script>
+  </body>
+</html>
